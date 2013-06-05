@@ -1,0 +1,27 @@
+﻿@model HotelBLL.Models.ProductItemViewModel
+<tr id="item-@Model.ProductItem.ItemID" >
+                <td>@Model.Index</td>
+                <td>
+                @Model.ProductItem.ItemName
+                </td>
+                <td>
+                  @Model.CheckedQuantity
+                </td>
+                <td>
+                   @Model.ProductItem.Unit
+                </td>
+                <td>
+                  @Model.SoldQuantity
+                </td>
+                <td>
+                  @Model.InventoryQuantity
+                </td>
+                <td>
+                  @Model.RealisticQuantity
+                </td>
+                <td>
+                    @Html.TextBox("txtRealistic", @Model.RealisticQuantity, new {@class="txtRealistic", data_productItemId = @Model.ProductItem.ItemID  })
+                </td>
+               
+                
+</tr>

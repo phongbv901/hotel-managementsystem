@@ -1,0 +1,80 @@
+﻿@model IEnumerable<HotelDAL.Product>
+<table class="table table-bordered table-striped table-fixed-header" id="listProductTable">
+    <thead class="header">
+        <tr>
+            <th>
+                Hình Ảnh
+            </th>
+            <th>
+                Tên Sản Phẩm
+            </th>
+            <th>
+                Giá Tiền
+            </th>
+            <th>
+                Danh Mục
+            </th>
+            <th>
+                Sửa
+            </th>
+            <th>
+                Xóa
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr id="trProduct-@item.ProductID">
+                <td>
+                    <img alt="product_image" src="/Content/imgs/product/@item.PicURL" width="80" height="80"/>
+                </td>
+                <td>
+                    @item.ProductName
+                </td>
+                <td>
+                    @item.Price
+                </td>
+                <td>
+                    @item.CatID
+                </td>
+                <td>
+                    <a class="btn btn-info" href="/Product/Update/@item.ProductID"  ><i class="icon-th-large icon-white">
+                    </i></a>
+                </td>
+                <td>
+                    <a class="btn btn-danger" id="@item.ProductID" onclick="deleteProduct(this)"><i class="icon-minus-sign icon-white">
+                    </i></a>
+                </td>
+            </tr>
+    
+        }
+    </tbody>
+</table>
+@*<script type="text/javascript">
+      function deleteProduct(index) {
+          $.ajax({
+              url: "/Product/Delete",
+              type: "POST",
+              data: { index: index },
+              error: function () {
+                  $("#alert-fail").fadeIn(2000).slideUp(1000).fadeOut();
+              },
+              success: function (result) {
+                  $("#listProductTable").fadeOut(200, function () {
+                      $("#trProduct-" + x.id).remove();
+                      $("#listProductTable").fadeIn();
+                  });
+
+              }
+          });
+      }
+    </script>*@
+<div class="alert alert-block" id="alert-fail" style="top: 50%; position: fixed;
+    width: 800px; display: none; margin-left: 50px;">
+    <button type="button" class="close" data-dismiss="alert">
+        &times;</button>
+    <h4>
+        Warning!</h4>
+    Best check yo self, you're not...
+</div>

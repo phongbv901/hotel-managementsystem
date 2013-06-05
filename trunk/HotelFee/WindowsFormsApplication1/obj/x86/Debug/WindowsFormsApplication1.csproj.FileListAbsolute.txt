@@ -1,0 +1,46 @@
+C:\Users\PHUONGLHK\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\PHUONGLHK\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\PHUONGLHK\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\bin\Debug\HotelFee.dll
+C:\Users\PHUONGLHK\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\bin\Debug\HotelFee.pdb
+C:\Users\PHUONGLHK\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\PHUONGLHK\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\PHUONGLHK\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\PHUONGLHK\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\PHUONGLHK\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\PHUONGLHK\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Users\PHUONGLHK\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Users\khoatnd\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Users\khoatnd\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Users\khoatnd\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\khoatnd\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\khoatnd\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\bin\Debug\HotelFee.dll
+C:\Users\khoatnd\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\bin\Debug\HotelFee.pdb
+C:\Users\khoatnd\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\khoatnd\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\khoatnd\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\khoatnd\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\khoatnd\Documents\Visual Studio 2010\Projects\HotelFee\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Projects\Hotel\HotelFee\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+E:\Projects\Hotel\HotelFee\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+E:\Projects\Hotel\HotelFee\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+E:\Projects\Hotel\HotelFee\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+E:\Projects\Hotel\HotelFee\WindowsFormsApplication1\bin\Debug\HotelFee.dll
+E:\Projects\Hotel\HotelFee\WindowsFormsApplication1\bin\Debug\HotelFee.pdb
+E:\Projects\Hotel\HotelFee\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Projects\Hotel\HotelFee\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+E:\Projects\Hotel\HotelFee\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+E:\Projects\Hotel\HotelFee\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Projects\Hotel\HotelFee\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\HMS20120813\HotelFee\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\HMS20120813\HotelFee\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\HMS20120813\HotelFee\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\HMS20120813\HotelFee\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\HMS20120813\HotelFee\WindowsFormsApplication1\bin\Debug\HotelFee.dll
+C:\HMS20120813\HotelFee\WindowsFormsApplication1\bin\Debug\HotelDAL.dll
+C:\HMS20120813\HotelFee\WindowsFormsApplication1\bin\Debug\HotelFee.pdb
+C:\HMS20120813\HotelFee\WindowsFormsApplication1\bin\Debug\HotelDAL.pdb
+C:\HMS20120813\HotelFee\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\HMS20120813\HotelFee\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\HMS20120813\HotelFee\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\HMS20120813\HotelFee\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\HMS20120813\HotelFee\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog

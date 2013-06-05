@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using HotelManagement.Models
+@model IEnumerable<HotelDAL.InventoryHistory>
+ 
+ <h2>NHẬP XUẤT KHO </h2>
+ 
+  <div class="well-small">
+        <button class="btn btn-large btn-success" onclick="ShowAddCostModal()">
+            <strong>Nhập xuất hàng</strong></button>
+    </div>
+ 
+ 
+ <form class="well form-inline">
+Từ
+<input type="text" id="StartDate" name="txtStartDate"/>
+Đến
+<input type="text" id="EndDate" name="txtEndDate"/>
+<input class="btn btn-primary" type="button" onclick="SearchProductImport()"    value="Báo cáo"/>
+</form>
+<div id="ProductImportTable"></div>
+
+<div id="WindowsFromAjax" style="width: auto !important; margin-left: auto; margin-right: auto;
+    display: none;">
+</div>
+
+<script language="javascript">
+
+    $(document).ready(function () {
+
+        var currentDate = new Date();
+        var beginDate = new Date(currentDate.getTime()); //Chon thoi diem bat dau ngay la 12h trua
+        beginDate.setHours(12, 00, 00, 00);
+
+        if (currentDate < beginDate) {
+            //Thoi diem nay chua toi 12 h trua
+            beginDate.setDate(beginDate.getDate() - 1);
+
+
+        }
+
+        var endDate = new Date();
+        endDate.setDate(beginDate.getDate() + 1);
+        endDate.setHours(12, 00);
+        $('#StartDate').datetimepicker({
+            dateFormat: 'dd-mm-yy'
+        });
+        $('#StartDate').datetimepicker('setDate', beginDate);
+
+
+        $('#EndDate').datetimepicker({
+            dateFormat: 'dd-mm-yy'
+        });
+        $('#EndDate').datetimepicker('setDate', endDate);
+    });
+
+
+    function SearchProductImport() {
+
+        var beginDate = $('#StartDate').val();
+        var endDate = $('#EndDate').val();
+        beginDate = ConvertDateVNToUS(beginDate);
+        endDate = ConvertDateVNToUS(endDate);
+        $.ajax({
+            url: "/ProductImport/SearchProductImport",
+            type: "GET",
+            data: { StartTime: beginDate, EndTime: endDate },
+            success: function (result) {
+                $("#ProductImportTable").fadeOut(300, function () {
+                    $('#ProductImportTable').html(result);
+                    $("#ProductImportTable").fadeIn(300);
+                });
+            }
+        });
+    }
+
+
+    function ShowAddProductImportModal() {
+        $("#WindowsFromAjax").html('<img src="../../Content/imgs/loading.gif"/>');
+        $("#WindowsFromAjax").dialog("open");
+        $.ajax({
+            url: "/Cost/ShowAddCostModal",
+            type: "GET",
+            success: function (result) {
+                $("#WindowsFromAjax").html(result);
+            }
+        });
+    }
+    
+   
+
+</script>
+

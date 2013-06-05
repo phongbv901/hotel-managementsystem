@@ -1,0 +1,73 @@
+﻿@using HotelDAL
+@model IEnumerable<Customer>
+
+<div class="row-fluid span-space">
+    
+        <h5>Thêm khách hàng</h5>
+        <div class="control-group" >
+            <label class="control-label">CMND</label>
+            <div class="controls">
+                <input type="text" id="personId" class="input-medium " />
+            </div>
+        </div>
+        <div class="control-group" >
+            <label class="control-label">Tên khách hàng</label>
+            <div class="controls">
+                <input type="text" id="customerName" class="input-medium " />
+            </div>
+        </div>
+        <div class="control-group" >
+            <label class="control-label">Quê quán</label>
+            <div class="controls">
+                <input type="text" id="address" class="input-medium " />
+            </div>
+        </div>
+        <div class="control-group">
+        <div class="controls">
+            <button id="btnAddCustomer" class="btn btn-info pagination-centered" title="Thêm khách hàng" onclick="addRentCustomer(); "><i class="icon-white icon-plus"></i> Thêm mới</button>
+        </div>
+        </div>
+       @* <div class="input-prepend">
+            <span class="add-on" style="width: 45px" >CMND</span>
+            <input type="text" id="personId" class="span10" />
+        </div>
+        <div class="input-prepend">
+            <span class="add-on" style="width: 45px">Tên</span>
+            <input type="text" id="customerName" class="span10" />
+        </div>
+        <div class="input-prepend">
+            <span class="add-on" style="width: 45px">ĐC</span>
+            <input type="text" id="address" class="span10" />
+        </div>
+        <div class="control-group">
+                <button id="btnAddCustomer" class="btn btn-info" title="Thêm khách hàng" onclick="addRentCustomer(); "><i class="icon-white icon-plus"></i> Thêm</button>
+        </div>*@
+  
+    <h5>Danh sách khách hàng</h5>
+    <div id="wrapCustomerTable"  style="max-height: 150px">   
+        <table class="table table-striped" id="tblCustomerDetail">
+            <tr>
+                <td class="span3">
+                    CMND
+                </td>
+                <td class="span4">
+                    Tên khách hàng
+                </td>
+                <td class="span3">
+                    Địa chỉ
+                </td>
+                <td class="span2">
+                </td>
+               
+            </tr>
+        
+            <tbody id="customerList">
+                @foreach (Customer item in Model)
+                {
+                    @Html.Partial("_RentCustomerItem", item)
+                }
+            </tbody>
+        </table>
+    
+    </div>
+</div>

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<HotelManagement.Models.OrderDetail>
+
+<table id="addedItemTable">
+    <tr>
+        <th>
+            Món
+        </th>
+        <th>
+            Tổng tiền
+        </th>
+        <th>
+            Số lượng
+        </th>
+        <th></th>
+    </tr>
+@{ int count = 0;}
+@foreach (var item in Model) {
+    <form action="Service/RemoveItem" method="GET">
+    <tr>
+        <td id="@item.OrderID">
+            @(++count)
+        </td>
+        <td>
+            @item.Product.ProductName
+        </td>
+        <td>
+            @item.Quantity
+        </td>
+            <td>
+            @item.TotalPrice
+        </td>
+        <td>
+            <button type="submit" class="btn btn-danger btn-mini">Xóa</button>
+        </td>
+    </tr>
+    </form>
+}
+
+</table>

@@ -1,0 +1,1015 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Content/d:bootstrap/d:js/f:bootstrap.js" caret="0" fromTop="0" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Controllers/f:ProductImportController.cs" caret="0" fromTop="0" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Controllers/f:InventoryController.cs" caret="0" fromTop="0" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Controllers/f:CostController.cs" caret="5307" fromTop="7" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Controllers/f:AdminController.cs" caret="0" fromTop="0" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Content/f:style.css" caret="1538" fromTop="8" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Content/f:Site.css" caret="0" fromTop="0" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Controllers/f:RoomController.cs" caret="902" fromTop="16" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rentBooking.js" caret="1729" fromTop="34" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Rent/f:RentBooking.cshtml" caret="0" fromTop="0" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Rent/f:_RentCustomer.cshtml" caret="2421" fromTop="13" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Rent/f:_RentCustomerItem.cshtml" caret="0" fromTop="0" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:ServiceReport/f:_ServiceMonthReportSearchList.cshtml" caret="0" fromTop="0" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Service/f:_ServiceForm.cshtml" caret="0" fromTop="0" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_service.js" caret="0" fromTop="0" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Shared/f:_Layout.cshtml" caret="0" fromTop="0" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Rent/f:_RentPrepaidItem.cshtml" caret="0" fromTop="0" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Rent/f:_RentPrepaid.cshtml" caret="1657" fromTop="11" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Rent/f:_RentFeeChangeAddition.cshtml" caret="1542" fromTop="16" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Service/f:_MenuByCategory.cshtml" caret="1252" fromTop="36" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Service/f:_OrderItem.cshtml" caret="519" fromTop="16" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Service/f:_AllOrderItems.cshtml" caret="955" fromTop="25" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Rent/f:_RentService.cshtml" caret="1189" fromTop="23" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Controllers/f:ServiceController.cs" caret="6799" fromTop="17" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Rent/f:_RentFeeChangeDiscount.cshtml" caret="1695" fromTop="24" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Rent/f:_RentFeeChangeItem.cshtml" caret="85" fromTop="1" />
+      <File id="CE037C65-7BE2-4EF4-9364-E2882E0611EB/d:BusinessLogic/f:RentBusinessLogic.cs" caret="9636" fromTop="21" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Controllers/f:RentController.cs" caret="6613" fromTop="22" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="15279" fromTop="14" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Rent/f:RentDetail.cshtml" caret="10621" fromTop="152" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="14588" fromTop="19" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="16657" fromTop="19" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Rent/f:_RentFeeChangeDiscount.cshtml" caret="1543" fromTop="16" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Rent/f:_RentService.cshtml" caret="1189" fromTop="26" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Service/f:_AllOrderItems.cshtml" caret="978" fromTop="28" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="18807" fromTop="19" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="9374" fromTop="18" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="20556" fromTop="21" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="20756" fromTop="17" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Service/f:_OrderItem.cshtml" caret="519" fromTop="16" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="20926" fromTop="30" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="20756" fromTop="0" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="20026" fromTop="30" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Controllers/f:ServiceController.cs" caret="1845" fromTop="17" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Controllers/f:ServiceController.cs" caret="1887" fromTop="18" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="19134" fromTop="18" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="19421" fromTop="13" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Service/f:_MenuByCategory.cshtml" caret="1252" fromTop="15" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="18981" fromTop="8" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="19836" fromTop="29" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="20160" fromTop="15" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Controllers/f:ServiceController.cs" caret="6773" fromTop="15" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Views/d:Rent/f:RentDetail.cshtml" caret="10621" fromTop="29" />
+      <File id="CE037C65-7BE2-4EF4-9364-E2882E0611EB/d:BusinessLogic/f:RentBusinessLogic.cs" caret="9636" fromTop="27" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="14957" fromTop="6" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="15084" fromTop="10" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="17024" fromTop="11" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="17138" fromTop="15" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="17346" fromTop="19" />
+      <File id="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9/d:Scripts/f:hms_rent.js" caret="15279" fromTop="14" />
+    </RecentEdits>
+  </RecentFiles>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="JavaScriptSpecificContext">
+      <Item value="alert" priority="485" />
+      <Item value="result" priority="120" />
+      <Item value="fromStatus" priority="10" />
+      <Item value="checkOutDate" priority="10" />
+      <Item value="var" priority="230" />
+      <Item value="service" priority="32" />
+      <Item value="hotelName" priority="43" />
+      <Item value="address" priority="21" />
+      <Item value="phone" priority="10" />
+      <Item value="docprint" priority="43" />
+      <Item value="$" priority="149" />
+      <Item value="function" priority="87" />
+      <Item value="i" priority="10" />
+      <Item value="$addHandlers" priority="9" />
+      <Item value="productName" priority="21" />
+      <Item value="quantity" priority="21" />
+      <Item value="totalPrice" priority="10" />
+      <Item value="ChangeFee" priority="10" />
+      <Item value="rentFee" priority="10" />
+      <Item value="totalFee" priority="18" />
+      <Item value="rentType" priority="54" />
+      <Item value="ShowChart" priority="21" />
+      <Item value="eval" priority="10" />
+      <Item value="document" priority="10" />
+      <Item value="currentId" priority="10" />
+      <Item value="menuItem" priority="10" />
+      <Item value="ChangeMenuItem" priority="10" />
+      <Item value="addCommas" priority="10" />
+      <Item value="d2" priority="10" />
+      <Item value="ConvertDateVNToUS" priority="10" />
+      <Item value="itemDate" priority="84" />
+      <Item value="x" priority="32" />
+      <Item value="month" priority="10" />
+      <Item value="rentId" priority="10" />
+      <Item value="amount" priority="32" />
+      <Item value="totalPayment" priority="65" />
+      <Item value="if" priority="32" />
+      <Item value="orgRentType" priority="32" />
+      <Item value="CloseWindowsFromAjax" priority="10" />
+      <Item value="roomid" priority="10" />
+      <Item value="new" priority="10" />
+      <Item value="Date" priority="10" />
+      <Item value="roomId" priority="21" />
+      <Item value="roomRentType" priority="21" />
+      <Item value="roomName" priority="10" />
+      <Item value="null" priority="32" />
+      <Item value="isFinite" priority="10" />
+      <Item value="isAdd" priority="10" />
+      <Item value="else" priority="10" />
+      <Item value="updateTotalPrice" priority="21" />
+      <Item value="false" priority="21" />
+      <Item value="true" priority="10" />
+      <Item value="data" priority="10" />
+      <Item value="applyScrollbar" priority="10" />
+      <Item value="CheckOut" priority="5" />
+      <Item value="additionFee" priority="21" />
+      <Item value="reductionFee" priority="10" />
+      <Item value="discountFee" priority="10" />
+      <Item value="UpdateEntireFee" priority="21" />
+      <Item value="UpdateTotalAddition" priority="10" />
+      <Item value="orderId" priority="10" />
+      <Item value="productId" priority="10" />
+      <Item value="price" priority="10" />
+      <Item value="sumPrice" priority="10" />
+    </ItemStatistics>
+    <ItemStatistics item="RazorTransitionCompletionContext">
+      <Item value="Model" priority="117" />
+      <Item value="using" priority="15" />
+      <Item value="Html" priority="65" />
+      <Item value="RenderBody`0" priority="7" />
+      <Item value="rentCount" priority="7" />
+      <Item value="while" priority="27" />
+      <Item value="floorID" priority="15" />
+      <Item value="if" priority="31" />
+      <Item value="rentId" priority="17" />
+      <Item value="category" priority="15" />
+      <Item value="item" priority="35" />
+      <Item value="foreach" priority="9" />
+      <Item value="for" priority="19" />
+      <Item value="index" priority="9" />
+      <Item value="fromDate" priority="17" />
+      <Item value="rentType" priority="7" />
+      <Item value="totalFee" priority="5" />
+      <Item value="remainFee" priority="9" />
+    </ItemStatistics>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="Model" priority="1271" />
+      <Item value="if" priority="1463" />
+      <Item value="toStatus" priority="58" />
+      <Item value="return" priority="1183" />
+      <Item value="Content`0" priority="154" />
+      <Item value="fromStatus" priority="63" />
+      <Item value="false" priority="512" />
+      <Item value="int" priority="1794" />
+      <Item value="RentStatusEnum`0" priority="159" />
+      <Item value="item" priority="408" />
+      <Item value="RoomStatusEnum`0" priority="63" />
+      <Item value="rent" priority="447" />
+      <Item value="null" priority="543" />
+      <Item value="bool" priority="511" />
+      <Item value="isAvailable" priority="63" />
+      <Item value="public" priority="955" />
+      <Item value="enum" priority="30" />
+      <Item value="CostStatusEnum`0" priority="379" />
+      <Item value="cost" priority="95" />
+      <Item value="using" priority="59" />
+      <Item value="HotelDAL" priority="108" />
+      <Item value="Cost`0" priority="27" />
+      <Item value="costs" priority="31" />
+      <Item value="costItem" priority="31" />
+      <Item value="Contains`1" priority="26" />
+      <Item value="costModel" priority="31" />
+      <Item value="true" priority="481" />
+      <Item value="costId" priority="31" />
+      <Item value="CostController`0" priority="32" />
+      <Item value="CostItemViewModel`0" priority="31" />
+      <Item value="orders" priority="95" />
+      <Item value="editable" priority="31" />
+      <Item value="else" priority="767" />
+      <Item value="ordersDetailViewModels" priority="31" />
+      <Item value="from" priority="161" />
+      <Item value="select" priority="159" />
+      <Item value="new" priority="800" />
+      <Item value="OrderDetailViewModel" priority="86" />
+      <Item value="IsEditable" priority="95" />
+      <Item value="OrderDetail" priority="90" />
+      <Item value="order" priority="257" />
+      <Item value="group" priority="31" />
+      <Item value="by" priority="31" />
+      <Item value="into" priority="31" />
+      <Item value="AppDomainSetup`0" priority="31" />
+      <Item value="let" priority="223" />
+      <Item value="sumOrder" priority="153" />
+      <Item value="r" priority="159" />
+      <Item value="OrderDetailViewModel`0" priority="31" />
+      <Item value="OrderID" priority="27" />
+      <Item value="void" priority="95" />
+      <Item value="OrderDetail`0" priority="31" />
+      <Item value="orderDetail" priority="416" />
+      <Item value="this" priority="511" />
+      <Item value="IEnumerable" priority="341" />
+      <Item value="NewsStyleUriParser`0" priority="31" />
+      <Item value="quantity" priority="65" />
+      <Item value="totalPrice" priority="32" />
+      <Item value="ProductID" priority="28" />
+      <Item value="price" priority="442" />
+      <Item value="TotalHour" priority="32" />
+      <Item value="private" priority="95" />
+      <Item value="DateTime`0" priority="575" />
+      <Item value="TimeSpan`0" priority="255" />
+      <Item value="var" priority="607" />
+      <Item value="HotelDataContext`0" priority="90" />
+      <Item value="HotelDataContext" priority="86" />
+      <Item value="db" priority="220" />
+      <Item value="addition" priority="192" />
+      <Item value="where" priority="127" />
+      <Item value="additionPriceId" priority="31" />
+      <Item value="string" priority="767" />
+      <Item value="for" priority="155" />
+      <Item value="hourRange" priority="93" />
+      <Item value="Length" priority="26" />
+      <Item value="hourDuration" priority="92" />
+      <Item value="i" priority="829" />
+      <Item value="Select`2" priority="26" />
+      <Item value="Convert`0" priority="31" />
+      <Item value="priceRange" priority="63" />
+      <Item value="PriceGroup`0" priority="63" />
+      <Item value="priceGroup" priority="753" />
+      <Item value="duration" priority="221" />
+      <Item value="totalHour" priority="321" />
+      <Item value="isLatelyFee" priority="31" />
+      <Item value="Environment`0" priority="127" />
+      <Item value="priceGroupID" priority="192" />
+      <Item value="startTime" priority="378" />
+      <Item value="toTime" priority="63" />
+      <Item value="fromTime" priority="63" />
+      <Item value="checkpoint1" priority="223" />
+      <Item value="checkpoint2" priority="159" />
+      <Item value="totalDays" priority="127" />
+      <Item value="abstract" priority="30" />
+      <Item value="class" priority="125" />
+      <Item value="override" priority="31" />
+      <Item value="IPriceCalculator`0" priority="127" />
+      <Item value="checkpoint" priority="160" />
+      <Item value="endTime" priority="447" />
+      <Item value="priceNight" priority="255" />
+      <Item value="Predicate" priority="31" />
+      <Item value="night" priority="96" />
+      <Item value="maxTime" priority="31" />
+      <Item value="nightPrice" priority="127" />
+      <Item value="orderby" priority="31" />
+      <Item value="descending" priority="31" />
+      <Item value="PriceNight`0" priority="31" />
+      <Item value="UriKind`0" priority="31" />
+      <Item value="CalculateNightPriceInRange`0" priority="31" />
+      <Item value="additionFeeCalculator" priority="128" />
+      <Item value="AdditionFeeCalculator" priority="28" />
+      <Item value="DayPriceCalculator`0" priority="31" />
+      <Item value="dayPriceCalculator" priority="96" />
+      <Item value="DayPriceCalculator" priority="28" />
+      <Item value="ascending" priority="63" />
+      <Item value="calculator" priority="96" />
+      <Item value="PriceFactory`0" priority="31" />
+      <Item value="RentTypeEnum`0" priority="97" />
+      <Item value="rentType" priority="189" />
+      <Item value="priceSummary" priority="31" />
+      <Item value="checkInDate" priority="63" />
+      <Item value="checkOutDate" priority="63" />
+      <Item value="priceCalculator" priority="31" />
+      <Item value="rentFee" priority="63" />
+      <Item value="description" priority="31" />
+      <Item value="remainFee" priority="158" />
+      <Item value="fullDayFee" priority="63" />
+      <Item value="StringBuilder`0" priority="31" />
+      <Item value="aRent" priority="95" />
+      <Item value="calc" priority="31" />
+      <Item value="_db" priority="95" />
+      <Item value="DateTime" priority="57" />
+      <Item value="hotelInfo" priority="63" />
+      <Item value="TimeSpan" priority="29" />
+      <Item value="rent1" priority="95" />
+      <Item value="startDate" priority="96" />
+      <Item value="endDate" priority="63" />
+      <Item value="timeOfDay" priority="256" />
+      <Item value="GetStartTimeOfDay`0" priority="31" />
+      <Item value="minusTimeOfDay" priority="95" />
+      <Item value="incomeList" priority="318" />
+      <Item value="count" priority="190" />
+      <Item value="IncomeReportItemModel`0" priority="26" />
+      <Item value="IncomeReportItemModel" priority="28" />
+      <Item value="emptyItem" priority="127" />
+      <Item value="listLength" priority="31" />
+      <Item value="fromDate" priority="251" />
+      <Item value="date" priority="318" />
+      <Item value="while" priority="185" />
+      <Item value="toDate" priority="126" />
+      <Item value="List" priority="250" />
+      <Item value="length" priority="91" />
+      <Item value="reportDate" priority="95" />
+      <Item value="isAdd" priority="63" />
+      <Item value="_IncomeGraph" priority="27" />
+      <Item value="_IncomeReport" priority="27" />
+      <Item value="Html" priority="236" />
+      <Item value="PartialView`0" priority="149" />
+      <Item value="RenderBody`0" priority="29" />
+      <Item value="ContentResult" priority="28" />
+      <Item value="View`0" priority="63" />
+      <Item value="Action`0" priority="31" />
+      <Item value="_IncomeDayofWeekReport" priority="32" />
+      <Item value="_IncomeDayReport" priority="27" />
+      <Item value="Report" priority="32" />
+      <Item value="ReportIncomeDayOfWeek" priority="27" />
+      <Item value="Authorize" priority="250" />
+      <Item value="len" priority="159" />
+      <Item value="index" priority="317" />
+      <Item value="dtFirstDate" priority="95" />
+      <Item value="rentCount" priority="29" />
+      <Item value="average" priority="31" />
+      <Item value="pageSize" priority="26" />
+      <Item value="rowIndex" priority="64" />
+      <Item value="column" priority="63" />
+      <Item value="floorID" priority="150" />
+      <Item value="newFloorID" priority="127" />
+      <Item value="Math`0" priority="31" />
+      <Item value="IFilterProvider`0" priority="63" />
+      <Item value="flag" priority="222" />
+      <Item value="break" priority="63" />
+      <Item value="section" priority="29" />
+      <Item value="in" priority="95" />
+      <Item value="HotelBLL" priority="180" />
+      <Item value="HotelManagement" priority="57" />
+      <Item value="RentViewModel`0" priority="27" />
+      <Item value="model" priority="316" />
+      <Item value="fieldset" priority="29" />
+      <Item value="switch" priority="31" />
+      <Item value="m" priority="31" />
+      <Item value="Dictionary&lt;string,object&gt;" priority="28" />
+      <Item value="_RentPrepaid" priority="27" />
+      <Item value="Rent" priority="32" />
+      <Item value="rentId" priority="443" />
+      <Item value="foreach" priority="93" />
+      <Item value="category" priority="59" />
+      <Item value="_RentBooking" priority="27" />
+      <Item value="Payment`0" priority="218" />
+      <Item value="Partial`0" priority="3" />
+      <Item value="_RentPrepaidItem" priority="55" />
+      <Item value="#endregion" priority="159" />
+      <Item value="payment" priority="609" />
+      <Item value="paymentAmount" priority="63" />
+      <Item value="try" priority="159" />
+      <Item value="od" priority="31" />
+      <Item value="isAdmin" priority="31" />
+      <Item value="_ServiceMonthReport" priority="83" />
+      <Item value="ServiceReport" priority="32" />
+      <Item value="ServiceReportDayItemModel`0" priority="63" />
+      <Item value="itemList" priority="31" />
+      <Item value="Quantity" priority="98" />
+      <Item value="collections" priority="64" />
+      <Item value="c" priority="31" />
+      <Item value="ProductQuantityInDay`0" priority="31" />
+      <Item value="ServiceReportItemModel`0" priority="222" />
+      <Item value="ServiceReportItemModel" priority="28" />
+      <Item value="product" priority="95" />
+      <Item value="productQuantity" priority="96" />
+      <Item value="serviceReport" priority="128" />
+      <Item value="FromDate" priority="7" />
+      <Item value="AddDays`0" priority="3" />
+      <Item value="FormCollection`0" priority="31" />
+      <Item value="ServiceReportViewModel`0" priority="31" />
+      <Item value="ServiceReportViewModel" priority="28" />
+      <Item value="productId" priority="31" />
+      <Item value="IncomeReportViewModel`0" priority="26" />
+      <Item value="GetServiceMonthInRange`0" priority="26" />
+      <Item value="ReportServiceByMonth" priority="27" />
+      <Item value="_ServiceMonthReportSearchList" priority="27" />
+      <Item value="RentBLL`0" priority="31" />
+      <Item value="connectionString" priority="186" />
+      <Item value="o" priority="31" />
+      <Item value="cs" priority="95" />
+      <Item value="readonly" priority="31" />
+      <Item value="RentBusinessLogic" priority="86" />
+      <Item value="rentBll" priority="31" />
+      <Item value="FeeDescription`0" priority="63" />
+      <Item value="FeeDescription" priority="28" />
+      <Item value="fee" priority="160" />
+      <Item value="RentBusinessLogic`0" priority="63" />
+      <Item value="rentBusiness" priority="384" />
+      <Item value="aPayment" priority="31" />
+      <Item value="checkoutUser" priority="31" />
+      <Item value="username" priority="63" />
+      <Item value="isPayAll" priority="31" />
+      <Item value="Customer`0" priority="63" />
+      <Item value="customers" priority="32" />
+      <Item value="#region" priority="63" />
+      <Item value="customer" priority="96" />
+      <Item value="personId" priority="31" />
+      <Item value="customerName" priority="31" />
+      <Item value="customerId" priority="31" />
+      <Item value="p" priority="63" />
+      <Item value="rentID" priority="31" />
+      <Item value="Room`0" priority="31" />
+      <Item value="room" priority="32" />
+      <Item value="Room" priority="28" />
+      <Item value="RoomID" priority="31" />
+      <Item value="roomId" priority="32" />
+      <Item value="RoomName" priority="32" />
+      <Item value="roomName" priority="32" />
+      <Item value="payments" priority="63" />
+      <Item value="paymentId" priority="31" />
+      <Item value="rs" priority="31" />
+      <Item value="ProductCategory`0" priority="31" />
+      <Item value="pc" priority="31" />
+      <Item value="ViewBag" priority="31" />
+      <Item value="ViewData" priority="63" />
+      <Item value="categories" priority="64" />
+      <Item value="as" priority="31" />
+      <Item value="address" priority="63" />
+      <Item value="notes" priority="63" />
+      <Item value="HttpContext" priority="31" />
+      <Item value="RentFeeChange`0" priority="223" />
+      <Item value="feeChange" priority="545" />
+      <Item value="RentFeeChange" priority="29" />
+      <Item value="feeChangeAmount" priority="31" />
+      <Item value="isAdditio" priority="31" />
+      <Item value="isAddition" priority="95" />
+      <Item value="feeChangeId" priority="63" />
+      <Item value="_RentFeeChangeItem" priority="83" />
+      <Item value="_RentFeeChangeDiscount" priority="27" />
+      <Item value="_RentFeeChangeAddition" priority="27" />
+      <Item value="orderFee" priority="31" />
+      <Item value="additionFee" priority="31" />
+      <Item value="discountFee" priority="31" />
+      <Item value="totalFee" priority="58" />
+      <Item value="totalPayment" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelManagement.Models.RentItemViewModel">
+      <Item value="Index" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelDAL.Rent">
+      <Item value="ApprovePerson" priority="55" />
+      <Item value="CheckInPerson" priority="55" />
+      <Item value="CheckOutPerson" priority="55" />
+      <Item value="Room" priority="53" />
+      <Item value="RentStatus" priority="80" />
+      <Item value="RentType" priority="107" />
+      <Item value="RentFee" priority="53" />
+      <Item value="CheckInDate" priority="27" />
+      <Item value="CheckOutDate" priority="214" />
+      <Item value="FeeDescription" priority="137" />
+      <Item value="RentID" priority="27" />
+      <Item value="OrderFee" priority="82" />
+      <Item value="BikeID" priority="110" />
+      <Item value="InvoiceID" priority="101" />
+      <Item value="TotalPayment" priority="108" />
+      <Item value="OrderDetails" priority="49" />
+      <Item value="ApproveDate" priority="27" />
+      <Item value="RentFeeChanges" priority="22" />
+      <Item value="AdditionFee" priority="133" />
+      <Item value="DiscountFee" priority="107" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@HotelDAL.RentStatusEnum">
+      <Item value="InStay" priority="53" />
+      <Item value="Paid" priority="53" />
+      <Item value="Approved" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelDAL.Room">
+      <Item value="RoomStatus" priority="53" />
+      <Item value="PriceGroupID" priority="26" />
+      <Item value="FloorID" priority="107" />
+      <Item value="RoomID" priority="26" />
+      <Item value="RoomName" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@HotelDAL.RoomStatusEnum">
+      <Item value="Ready" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelDAL.Cost">
+      <Item value="LoggedPerson" priority="110" />
+      <Item value="CostStatus" priority="465" />
+      <Item value="ApprovedPerson" priority="55" />
+      <Item value="PaidPerson" priority="54" />
+      <Item value="CostID" priority="83" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@HotelDAL.CostStatusEnum">
+      <Item value="New" priority="274" />
+      <Item value="Disabled" priority="135" />
+      <Item value="Approved" priority="109" />
+      <Item value="WaitingDisabled" priority="27" />
+      <Item value="WaitDisabled" priority="55" />
+      <Item value="Deleted" priority="111" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelManagement.Models.CostViewModel">
+      <Item value="Cost" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="HtmlCodeCompletionContext">
+      <Item value="HotelDAL" priority="9" />
+      <Item value="id" priority="61" />
+      <Item value="class" priority="341" />
+      <Item value="div" priority="324" />
+      <Item value="href" priority="11" />
+      <Item value="_Checkout.cshtml" priority="5" />
+      <Item value="rentFee" priority="17" />
+      <Item value="title" priority="18" />
+      <Item value="style" priority="54" />
+      <Item value="right" priority="24" />
+      <Item value="inline" priority="11" />
+      <Item value="btn-mini" priority="4" />
+      <Item value="icon-white" priority="23" />
+      <Item value="menuitem" priority="6" />
+      <Item value="script" priority="11" />
+      <Item value="type" priority="11" />
+      <Item value="text/javascript" priority="11" />
+      <Item value="language" priority="5" />
+      <Item value="javascript" priority="5" />
+      <Item value="td" priority="17" />
+      <Item value="row-fluid" priority="5" />
+      <Item value="section" priority="7" />
+      <Item value="form-horizontal" priority="6" />
+      <Item value="squiggly-border" priority="6" />
+      <Item value="table-bordered" priority="6" />
+      <Item value="bs-docs-container" priority="6" />
+      <Item value="bs-docs-example" priority="4" />
+      <Item value="border" priority="13" />
+      <Item value="box" priority="4" />
+      <Item value="container" priority="19" />
+      <Item value="radmin-box" priority="6" />
+      <Item value="a" priority="5" />
+      <Item value="Index.cshtml" priority="5" />
+      <Item value="label-warning" priority="4" />
+      <Item value="label-important" priority="4" />
+      <Item value="padding-top" priority="4" />
+      <Item value="form-inline" priority="21" />
+      <Item value="float" priority="6" />
+      <Item value="Content" priority="5" />
+      <Item value="HotelIntro" priority="5" />
+      <Item value="HotelImage" priority="5" />
+      <Item value="btn" priority="5" />
+      <Item value="btn-success" priority="30" />
+      <Item value="icon-home" priority="9" />
+      <Item value="span" priority="5" />
+      <Item value="icon-picture" priority="4" />
+      <Item value="icon-calendar" priority="4" />
+      <Item value="icon-gift" priority="4" />
+      <Item value="fieldset" priority="19" />
+      <Item value="btn-small" priority="34" />
+      <Item value="large" priority="5" />
+      <Item value="table-striped" priority="15" />
+      <Item value="table-hover" priority="10" />
+      <Item value="input-mini" priority="4" />
+      <Item value="input-medium" priority="4" />
+      <Item value="pull-right" priority="23" />
+      <Item value="padding-right" priority="6" />
+      <Item value="tr" priority="5" />
+      <Item value="thead" priority="12" />
+      <Item value="table" priority="11" />
+      <Item value="tbody" priority="5" />
+      <Item value="h5" priority="17" />
+      <Item value="span14" priority="4" />
+      <Item value="span17" priority="10" />
+      <Item value="btn-mi" priority="4" />
+      <Item value="active" priority="11" />
+      <Item value="margin-bottom" priority="6" />
+      <Item value="overflow" priority="6" />
+      <Item value="auto" priority="8" />
+      <Item value="span3" priority="5" />
+      <Item value="span12" priority="24" />
+      <Item value="span23" priority="5" />
+      <Item value="span1" priority="17" />
+      <Item value="disabled" priority="4" />
+      <Item value="input" priority="5" />
+      <Item value="alert-success" priority="27" />
+      <Item value="label" priority="12" />
+      <Item value="input-prepend" priority="4" />
+      <Item value="th" priority="5" />
+      <Item value="strong" priority="5" />
+      <Item value="row-fluid-expand" priority="4" />
+      <Item value="modal" priority="6" />
+      <Item value="modal-header" priority="6" />
+      <Item value="h6" priority="5" />
+      <Item value="h3" priority="5" />
+      <Item value="i" priority="17" />
+      <Item value="icon-edit" priority="4" />
+      <Item value="icon-glass" priority="4" />
+      <Item value="no-padding" priority="11" />
+      <Item value="rentInfo" priority="5" />
+      <Item value="pagination-right" priority="6" />
+      <Item value="modal-footer" priority="6" />
+      <Item value="centered" priority="5" />
+      <Item value="pagination-centered" priority="4" />
+      <Item value="controls" priority="23" />
+      <Item value="table-fixed-header" priority="5" />
+      <Item value="table-max-size" priority="17" />
+      <Item value="max-height" priority="15" />
+      <Item value="width" priority="13" />
+      <Item value="span2" priority="17" />
+      <Item value="pull-left" priority="6" />
+      <Item value="control-group" priority="12" />
+      <Item value="height" priority="6" />
+      <Item value="span-space" priority="24" />
+      <Item value="well" priority="6" />
+      <Item value="alert" priority="23" />
+      <Item value="alert-block" priority="4" />
+      <Item value="alert-info" priority="6" />
+      <Item value="alert-error" priority="12" />
+      <Item value="icon-print" priority="5" />
+      <Item value="align-center" priority="6" />
+      <Item value="onclick" priority="6" />
+      <Item value="CheckOut" priority="6" />
+      <Item value="btn-info" priority="5" />
+      <Item value="li" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelDAL.HotelDataContext">
+      <Item value="Costs" priority="111" />
+      <Item value="PriceNights" priority="108" />
+      <Item value="PriceAdditions" priority="26" />
+      <Item value="HotelInfos" priority="26" />
+      <Item value="Payments" priority="53" />
+      <Item value="Products" priority="26" />
+      <Item value="ProductCategories" priority="26" />
+      <Item value="RentFeeChanges" priority="78" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelManagement.Models.SearchCostTableViewModel">
+      <Item value="Costs" priority="27" />
+      <Item value="IsAdmin" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelManagement.Models.CostItemViewModel">
+      <Item value="IsAdmin" priority="53" />
+      <Item value="Cost" priority="195" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Security.Roles">
+      <Item value="GetRolesForUser`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="JavaScriptSpecificContextQualified">
+      <Item value="html" priority="49" />
+      <Item value="find" priority="26" />
+      <Item value="remote" priority="7" />
+      <Item value="remove" priority="17" />
+      <Item value="document" priority="39" />
+      <Item value="write" priority="37" />
+      <Item value="val" priority="43" />
+      <Item value="each" priority="9" />
+      <Item value="class" priority="7" />
+      <Item value="get" priority="9" />
+      <Item value="valueOf" priority="19" />
+      <Item value="eq" priority="8" />
+      <Item value="attr" priority="15" />
+      <Item value="live" priority="9" />
+      <Item value="removeClass" priority="31" />
+      <Item value="addClass" priority="23" />
+      <Item value="setDate" priority="27" />
+      <Item value="getDay" priority="15" />
+      <Item value="getMonth" priority="7" />
+      <Item value="getDate" priority="34" />
+      <Item value="setTime" priority="9" />
+      <Item value="getTime" priority="9" />
+      <Item value="toString" priority="7" />
+      <Item value="prepend" priority="15" />
+      <Item value="addCssClass" priority="7" />
+    </ItemStatistics>
+    <ItemStatistics item="CssCodeCompletionContext">
+      <Item value="imgHeader" priority="16" />
+      <Item value="CheckInDate" priority="4" />
+      <Item value="CheckOutDate" priority="3" />
+      <Item value="rentFee" priority="3" />
+      <Item value="orderFee" priority="4" />
+      <Item value="totalFee" priority="7" />
+      <Item value="not" priority="9" />
+      <Item value="right" priority="2" />
+      <Item value="rentFeeDetail" priority="3" />
+      <Item value="mnuRoom" priority="4" />
+      <Item value="table-bordered" priority="4" />
+      <Item value="padding-top" priority="0" />
+      <Item value="float" priority="0" />
+      <Item value="padding-right" priority="0" />
+      <Item value="margin" priority="3" />
+      <Item value="RentID" priority="4" />
+      <Item value="margin-bottom" priority="0" />
+      <Item value="overflow" priority="0" />
+      <Item value="auto" priority="1" />
+      <Item value="paymentList" priority="3" />
+      <Item value="totalPayment" priority="7" />
+      <Item value="wrapPaymentTable" priority="3" />
+      <Item value="wrapCustomerTable" priority="3" />
+      <Item value="btn-mini" priority="4" />
+      <Item value="input-append" priority="5" />
+      <Item value="input" priority="5" />
+      <Item value="textarea" priority="5" />
+      <Item value="reportDate" priority="7" />
+      <Item value="min-width" priority="5" />
+      <Item value="row-fluid" priority="4" />
+      <Item value="width" priority="7" />
+      <Item value="padding" priority="5" />
+      <Item value="ordered-item" priority="4" />
+      <Item value="success" priority="9" />
+      <Item value="max-height" priority="13" />
+      <Item value="height" priority="0" />
+      <Item value="wrapMenu" priority="3" />
+      <Item value="addionFee" priority="3" />
+      <Item value="discountFee" priority="3" />
+      <Item value="discountAmount" priority="3" />
+      <Item value="discountNotes" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelDAL.OrderDetail">
+      <Item value="ProductID" priority="80" />
+      <Item value="Quantity" priority="109" />
+      <Item value="Product" priority="161" />
+      <Item value="TotalPrice" priority="107" />
+      <Item value="OrderID" priority="26" />
+      <Item value="OrderDate" priority="110" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IGrouping`2">
+      <Item value="Sum`1" priority="54" />
+      <Item value="Count`1" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelDAL.Product">
+      <Item value="ProductName" priority="107" />
+      <Item value="PicURL" priority="80" />
+      <Item value="Price" priority="54" />
+      <Item value="ProductID" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelManagement.Models.OrderDetailViewModel">
+      <Item value="OrderID" priority="26" />
+      <Item value="OrderDate" priority="26" />
+      <Item value="PicURL" priority="26" />
+      <Item value="Price" priority="26" />
+      <Item value="ProductID" priority="26" />
+      <Item value="ProductName" priority="53" />
+      <Item value="Quantity" priority="26" />
+      <Item value="TotalPrice" priority="26" />
+      <Item value="GetValueFromOrderDetail`0" priority="107" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelDAL.PriceGroup">
+      <Item value="SecondHourPrice" priority="108" />
+      <Item value="ThirdHourPrice" priority="136" />
+      <Item value="FirstHourPrice" priority="53" />
+      <Item value="AdditionPriceID" priority="22" />
+      <Item value="DayPrice" priority="215" />
+      <Item value="EndNightTime" priority="54" />
+      <Item value="RoundMinute" priority="53" />
+      <Item value="DayAdditionPriceID" priority="26" />
+      <Item value="NightAdditionPriceID" priority="27" />
+      <Item value="NextHourPrice" priority="53" />
+      <Item value="PriceGroupID" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelDAL.PriceAddition">
+      <Item value="AdditionPriceID" priority="26" />
+      <Item value="LateHourRange" priority="26" />
+      <Item value="LatePriceRange" priority="26" />
+      <Item value="EarlyHourRange" priority="27" />
+      <Item value="EarlyPriceRange" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="FirstOrDefault`1" priority="107" />
+      <Item value="Max`1" priority="54" />
+      <Item value="ToList`1" priority="50" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Split`0" priority="54" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToInt32`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="ToArray`1" priority="26" />
+      <Item value="Count`1" priority="134" />
+      <Item value="ElementAt`1" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.TimeSpan">
+      <Item value="TotalHours" priority="26" />
+      <Item value="Minutes" priority="26" />
+      <Item value="TotalMinutes" priority="80" />
+      <Item value="Days" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelFee.HourPriceCalculator">
+      <Item value="Description" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Environment">
+      <Item value="NewLine" priority="107" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelFee.DayPriceCalculator">
+      <Item value="Description" priority="80" />
+      <Item value="CalculatePrice`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToShortTimeString`0" priority="26" />
+      <Item value="ToString`0" priority="185" />
+      <Item value="TimeOfDay" priority="270" />
+      <Item value="Date" priority="350" />
+      <Item value="AddDays`0" priority="162" />
+      <Item value="Add`0" priority="54" />
+      <Item value="AddHours`0" priority="26" />
+      <Item value="AddMinutes`0" priority="26" />
+      <Item value="Ticks" priority="26" />
+      <Item value="AddMonths`0" priority="77" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelDAL.PriceNight">
+      <Item value="PriceGroupID" priority="26" />
+      <Item value="MaxDuration" priority="26" />
+      <Item value="Price" priority="136" />
+      <Item value="StartTime" priority="161" />
+      <Item value="EndTime" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IOrderedQueryable`1">
+      <Item value="FirstOrDefault`1" priority="27" />
+      <Item value="ToList`1" priority="26" />
+      <Item value="All`1" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelFee.AdditionFeeCalculator">
+      <Item value="CalculateAdditionFee`0" priority="80" />
+      <Item value="Description" priority="81" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelFee.NightPriceCalculator">
+      <Item value="Description" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@HotelFee.PriceFactory">
+      <Item value="GetPriceCalculator`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelFee.IPriceCalculator">
+      <Item value="CalculatePrice`0" priority="53" />
+      <Item value="Description" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Nullable`1">
+      <Item value="Value" priority="135" />
+      <Item value="ToString`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@HotelDAL.RentTypeEnum">
+      <Item value="Night" priority="27" />
+      <Item value="Day" priority="82" />
+      <Item value="Hour" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="188" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format`0" priority="215" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelManagement.Models.CheckoutViewModel">
+      <Item value="Rent" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Linq.Table`1">
+      <Item value="First`1" priority="26" />
+      <Item value="InsertAllOnSubmit`1" priority="26" />
+      <Item value="InsertOnSubmit`0" priority="22" />
+      <Item value="ToList`1" priority="54" />
+      <Item value="Where`1" priority="83" />
+      <Item value="OrderBy`2" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelDAL.HotelInfo">
+      <Item value="StartDayTime" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelManagement.Models.IncomeReportItemModel">
+      <Item value="ReportDate" priority="107" />
+      <Item value="ToString`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Insert`0" priority="45" />
+      <Item value="Count" priority="132" />
+      <Item value="ElementAt`1" priority="27" />
+      <Item value="Add`0" priority="27" />
+      <Item value="Sum`1" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.HtmlHelper`1">
+      <Item value="Hidden`0" priority="53" />
+      <Item value="RenderPartial`0" priority="27" />
+      <Item value="HiddenFor`2" priority="26" />
+      <Item value="Partial`0" priority="26" />
+      <Item value="CheckBox`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelManagement.Models.Report.IncomeReportDayViewModel">
+      <Item value="IncomeItems" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelManagement.Models.Report.IncomeReportDayItemModel">
+      <Item value="ReportDate" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelManagement.Models.SearchRentTableViewModel">
+      <Item value="CurrentPageIndex" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Math">
+      <Item value="Min`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelBLL.Models.RentViewModel">
+      <Item value="Rent" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelBLL.Models.RentOrdersViewModel">
+      <Item value="TotalOrderFee" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelBLL.Models.CheckoutViewModel">
+      <Item value="Rent" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelBLL.Models.ServiceViewModel">
+      <Item value="Categories" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelDAL.ProductCategory">
+      <Item value="CateName" priority="26" />
+      <Item value="CateID" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelBLL.Models.RentModels.RentBookingViewModel">
+      <Item value="Rent" priority="53" />
+      <Item value="Room" priority="83" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelDAL.Payment">
+      <Item value="RentID" priority="136" />
+      <Item value="Rent" priority="80" />
+      <Item value="Amount" priority="80" />
+      <Item value="Username" priority="53" />
+      <Item value="PaymentID" priority="53" />
+      <Item value="Notes" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Linq.EntitySet`1">
+      <Item value="Sum`1" priority="54" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelBLL.Models.ServiceReport.ServiceReportDayItemModel">
+      <Item value="Product" priority="81" />
+      <Item value="Quantity" priority="27" />
+      <Item value="QuantityInDays" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelBLL.Models.ServiceReport.ServiceReportItemModel">
+      <Item value="Product" priority="26" />
+      <Item value="QuantityInDays" priority="26" />
+      <Item value="FromDate" priority="26" />
+      <Item value="ToDate" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@HotelBLL.Models.ServiceReport.ServiceReportItemModel">
+      <Item value="ProductQuantityInDay`0" priority="80" />
+      <Item value="ProductQuantityInDay" priority="51" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelBLL.Models.ServiceReport.ServiceReportViewModel">
+      <Item value="FromDate" priority="216" />
+      <Item value="ToDate" priority="107" />
+      <Item value="ServiceItems" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelBLL.Models.ServiceReport.ServiceReportDayItemModel+ProductQuantityInDay">
+      <Item value="Quantity" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelBLL.Models.ServiceReport.ServiceReportItemModel+ProductQuantityInDay">
+      <Item value="Quantity" priority="26" />
+      <Item value="Date" priority="54" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelOfflineBLL.BusinessLogic.RentBusinessLogic">
+      <Item value="GetRentDetailById`0" priority="26" />
+      <Item value="CalculateRentFee`0" priority="26" />
+      <Item value="CheckOut`0" priority="26" />
+      <Item value="GetRentCustomers`0" priority="26" />
+      <Item value="AddRentCustomers`0" priority="26" />
+      <Item value="RemoveRentCustomers`0" priority="26" />
+      <Item value="GetRentPayments`0" priority="26" />
+      <Item value="RemoveRentPayment`0" priority="26" />
+      <Item value="AddRentPayment`0" priority="26" />
+      <Item value="GetRentServiceCategory`0" priority="26" />
+      <Item value="GetRentFeeChange`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelOfflineBLL.BusinessLogic.RentBusinessLogic+FeeDescription">
+      <Item value="RentFee" priority="53" />
+      <Item value="RentDescription" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@HotelOfflineBLL.BusinessLogic.RentBusinessLogic">
+      <Item value="FeeDescription`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Boolean">
+      <Item value="ToString`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelDAL.Customer">
+      <Item value="Address" priority="54" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpContextBase">
+      <Item value="User" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Security.Principal.IPrincipal">
+      <Item value="Identity" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Security.Principal.IIdentity">
+      <Item value="Name" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelDAL.RentFeeChange">
+      <Item value="AddTime" priority="54" />
+      <Item value="IsAddition" priority="107" />
+      <Item value="RentFeeChangeID" priority="111" />
+      <Item value="Rent" priority="26" />
+      <Item value="Amount" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HotelBLL.Models.OrderDetailViewModel">
+      <Item value="TotalPrice" priority="27" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+</Configuration>

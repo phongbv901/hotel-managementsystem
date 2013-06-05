@@ -1,0 +1,64 @@
+﻿@using HotelDAL
+@model IEnumerable<RentFeeChange>
+@{
+    Layout = null;
+}
+
+<h5>Giảm giá</h5>
+<div class="control-group">
+    <label class="control-label">Nội dung</label>
+    <div class="controls">
+        <input type="text" id="discountNotes" class="input-medium" />
+        
+    </div>
+</div>
+
+<div class="control-group">
+    <label class="control-label">Số tiền</label>
+    <div class="controls">
+        <input type="text" id="discountAmount" class="input-medium" />
+        
+    </div>
+</div>
+
+<div class="control-group">
+    <div class="controls">
+        <button id="btnDiscount" class="btn btn-info " title="Trả trước" onclick="addDiscount(); "><i class="icon-white icon-plus"></i>Thêm mới</button>
+    </div>
+</div>
+
+<div id="wrapDiscountTable" class="table-max-size">
+    <table class="table table-hover table-striped ">
+    
+         
+            <tr>
+                <td class="span4">
+                    Nội dung
+                </td>
+                <td  class="span3">
+                    Số tiền
+                </td>
+                <td class="span3" >
+                    Thời gian
+                </td>
+                <td  class="span2">
+                </td>
+            </tr>
+       
+        <tbody id="discountList">      
+            @{
+                int count = 0;
+                int sum = 0;
+
+                foreach (RentFeeChange item in Model)
+                {
+                    sum += item.Amount;
+                    @Html.Partial("_RentFeeChangeItem", item)
+                }
+            }
+        </tbody>
+    </table>
+
+</div>
+<input type="hidden" id="hdfTotalDiscount"  value="@sum"  />
+    

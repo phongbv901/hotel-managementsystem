@@ -1,0 +1,29 @@
+﻿@using HotelDAL
+@model  IEnumerable<Room>
+@{
+    ViewBag.Title = "Hotel Pro-Quản lý phòng";
+}
+
+<h3>Danh Sách Phòng</h3>
+<div >
+    <span class="label label-success">Phòng trống</span>
+    <span class="label label-warning">Thuê giờ</span>
+    <span class="label">Qua đêm</span>
+    <span class="label label-important">Thuê ngày</span>
+</div>
+
+        @foreach (Room r in Model)
+        {
+            <div id="contain-@r.RoomID" class="span2">
+                @Html.Partial("_Room", r)
+            </div>
+        }
+
+<div id="modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  
+</div>
+
+
+
+   
+

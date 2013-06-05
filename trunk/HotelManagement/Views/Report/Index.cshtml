@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+            <div class="tabbable tabs-left">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#lA" data-toggle="tab">Doanh thu</a></li>
+                <li class=""><a href="#lB" data-toggle="tab">Section 2</a></li>
+                <li class=""><a href="#lC" data-toggle="tab">Section 3</a></li>
+              </ul>
+
+            <div class="tab-content">
+                @Html.Action("GetIncomeReport");
+            </div>
+            </div> 
+
+<script>
+
+</script>

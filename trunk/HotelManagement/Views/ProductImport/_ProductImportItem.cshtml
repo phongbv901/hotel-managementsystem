@@ -1,0 +1,78 @@
+﻿@model HotelBLL.Models.ProductImportViewModel
+
+<tr id="cost-@Model.ProductInventory.ProductInventoryID" >
+                <td>@Model.Index</td>
+                <td>
+                @Model.ProductInventory.ProductItem.ItemName
+                </td>
+                <td>
+                  
+                   @Model.ProductInventory.ProductItem.Unit
+                </td>
+                <td>
+                   @Model.ProductInventory.Quantity
+                </td>
+               
+                <td>
+                    @if (Model.ProductInventory.IsImport)
+                    {
+                        <span class="label label-important">Nhập</span>
+                    }
+                    else
+                    {
+                         <span class="label label-warning">Xuất</span>
+                    }
+                   
+                </td>
+                 <td>
+                   @Model.ProductInventory.ChangeDate.ToString("dd-MM-yyyy HH:mm")
+                </td>
+               
+                <td>
+                    @{
+                        switch (@Model.ProductInventory.IsApproved)
+                        {
+                            case false:
+                                { 
+                        <span class="label label-warning">Chưa Duyệt</span>
+                                    break;
+                                }
+                            case true:
+                                { 
+                        <span class="label label-success">Đã Duyệt</span>
+                                    break;
+                                }
+                            default:
+                                break;
+                        }    
+                    }
+                </td>
+                <td>
+                    <button class="btn" type="submit"  data-index="@Model.Index" onclick="ShowUpdateCostModal(this)" data-costid="@Model.ProductInventory.ProductInventoryID"  >
+                        <i class="icon-tasks"></i>
+                    </button>
+                </td>
+                <td>
+                    @{
+                        
+                        switch (@Model.ProductInventory.IsApproved)
+                        {
+
+                            case false:
+                                { 
+                        <button class="btn btn-success" type="submit" data-changestatus="approve" data-costid="@Model.ProductInventory.ProductInventoryID" data-index="@Model.Index" onclick="ChangeCostStatus(this)">
+                            <i class="icon-check"></i></button>    
+                                                                                                                                          break;
+                                }
+
+                            default:
+                                break;
+                        }    
+                    }
+                </td>
+                <td>
+                        <button class="btn btn-danger" type="submit" data-changestatus="remove" data-costid="@Model.ProductInventory.ProductInventoryID" data-index="@Model.Index" onclick="ChangeCostStatus(this)">
+                            <i class="icon-remove"></i></button>
+                      
+                </td>
+</tr>

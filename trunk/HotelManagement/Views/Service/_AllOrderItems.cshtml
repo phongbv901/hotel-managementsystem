@@ -1,0 +1,36 @@
+﻿@*Liệt kê các dịch vụ đã được khách gọi*@
+@model HotelBLL.Models.RentOrdersViewModel
+
+<div id="wrapOrderTable" class="table-max-size">
+    <table class="table table-striped" id="tblServiceDetail">
+        <thead>
+            <tr class="trHead" >
+                <td >
+                   
+                </td>
+                <td >
+                    Tên
+                </td>
+                <td >
+                    SL
+                </td>
+                <td >
+                    Tổng
+                </td>
+                @if (Model.IsEditable == true)
+                {
+                    <td >
+                    </td>
+                }
+            </tr>
+        </thead>
+        <tbody id="ordered-item">
+            @foreach (var item in Model.OrderDetailViewModels)
+            {
+                @Html.Partial("_OrderItem", item)
+            }
+        </tbody>
+    </table>
+</div>
+@Html.Hidden("hdfOrderFee", @Model.TotalOrderFee,new {id="hdfOrderFee"})
+
