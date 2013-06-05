@@ -1,0 +1,64 @@
+﻿@using HotelDAL
+@model IEnumerable<Payment>
+@{
+    Layout = null;
+}
+
+<h5>Thanh toán trước</h5>
+<div class="control-group">
+    <label class="control-label">Nội dung</label>
+    <div class="controls">
+        <input type="text" id="paymentNotes" class="input-medium" />
+        
+    </div>
+</div>
+
+<div class="control-group">
+    <label class="control-label">Số tiền</label>
+    <div class="controls">
+        <input type="text" id="paymentAmount" class="input-medium" />
+        
+    </div>
+</div>
+
+<div class="control-group">
+    <div class="controls">
+        <button id="btnPrepaid" class="btn btn-info " title="Trả trước" onclick="addPayment(); "><i class="icon-white icon-plus"></i>Thêm mới</button>
+    </div>
+</div>
+
+<div id="wrapPaymentTable" class="table-max-size">
+    <table class="table table-hover table-striped ">
+    
+         
+            <tr>
+                <td class="span4">
+                    Nội dung
+                </td>
+                <td  class="span3">
+                    Số tiền
+                </td>
+                <td class="span3" >
+                    Thời gian
+                </td>
+                <td  class="span2">
+                </td>
+            </tr>
+       
+        <tbody id="paymentList">      
+            @{
+                int count = 0;
+                int sum = 0;
+
+                foreach (Payment item in Model)
+                {
+                    sum += item.Amount;
+                    @Html.Partial("_RentPrepaidItem", item)
+                }
+            }
+        </tbody>
+    </table>
+
+</div>
+<input type="hidden" id="hdfTotalPayment" name="TotalPayment" value="@sum"  />
+    

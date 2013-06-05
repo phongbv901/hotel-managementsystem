@@ -1,0 +1,41 @@
+﻿@using HotelBLL.Models
+@using HotelDAL
+@model ProductViewModal
+@{
+    ViewBag.Title = "ListProduct";
+}
+<h2>
+    Sản Phẩm</h2>
+<p>
+    @Html.ActionLink("Thêm San Pham", "Create", null, new { @class = "btn" })
+</p>
+<div class="btn-group" data-toggle="buttons-radio" align="left" style="margin-bottom: 20px">
+    <button type="button" class="btn active" onclick="loadByCat(99)">
+        Tat ca</button>
+    @foreach (var item in Model.category)
+    {
+        <button type="button" class="btn" onclick="loadByCat(@item.CateID)">@item.CateName</button>
+    
+    }
+</div>
+<div id="pro">
+    @Html.Action("LoadProductByCategory", "Product", new { index = 99 });
+</div>
+<script type="text/javascript">
+    function loadByCat(index) {
+        $.ajax({
+            url: "/Product/LoadProductByCategory",
+            type: "GET",
+            data: { index: index },
+            success: function (result) {
+                alert("true");
+                var loadPro = document.getElementById("pro");
+                loadPro.innerHTML = result;
+            },
+            error: function (result) {
+                alert("fail");
+            }
+        }
+        );
+    }
+</script>

@@ -1,0 +1,151 @@
+﻿@using System.Text
+@using HotelBLL.Models.Report
+@model IncomeReportDayOfWeekViewModel
+    
+<table class="table table-bordered table-striped table-fixed-header">
+    <thead class="header" >
+        <tr>
+            <th>
+                STT
+            </th>
+            <th>
+                Thứ trong tuần 
+            </th>
+            <th>
+                Lượt thuê
+            </th>
+            <th>
+                Tiền dịch vụ
+            </th>
+            <th>
+                Tiền phòng
+            </th>
+            <th>
+                Tổng phải thu
+            </th>
+            <th>
+                Tổng đã duyệt
+            </th>
+            <th>
+                Số ngày
+            </th>
+            <th>
+                TB thu nhập
+            </th>
+            <th>
+                Chênh lệch
+            </th>
+            <th>
+                Tổng chưa duyệt
+            </th>
+       
+        </tr>
+    </thead>
+    
+    <tbody>
+        @{
+            int len = Model.IncomeItems.Count();
+            StringBuilder valueBuilder = new StringBuilder("[");
+            StringBuilder xAxisBuilder = new StringBuilder("[");
+            for (int i = 0; i < len; i++)
+            {
+                IncomeReportDayOfWeekItemModel item = Model.IncomeItems.ElementAt(i);
+                int rentCount = item.RentCount;
+                int orderFee = item.OrderFee;
+                int rentFee = item.RentFee;
+                int total = orderFee + rentFee; //Tổng phải thu
+                int approvePayment = item.ApprovePayement;
+                int unApprovePayment = item.UnApprovePayment;
+
+                int totalDays = item.TotalDays;
+
+                int average = (totalDays == 0) ? 0 : approvePayment/totalDays;
+
+                int remain = total - approvePayment;
+
+
+                string s = "";
+                switch (item.ReportDate)
+                {
+                    case DayOfWeek.Sunday:
+                    s = "Chủ nhật";
+                    break;
+                    case DayOfWeek.Monday:
+                    s = "Thứ 2";
+                    break;
+                    case DayOfWeek.Tuesday:
+                    s = "Thứ 3";
+                    break;
+                    case DayOfWeek.Wednesday:
+                    s = "Thứ 4";
+                    break;
+                    case DayOfWeek.Thursday:
+                    s = "Thứ 5";
+                    break;
+                    case DayOfWeek.Friday:
+                    s = "Thứ 6";
+                    break;
+                    case DayOfWeek.Saturday:
+                    s = "Thứ 7";
+                    break;
+                }
+
+
+                valueBuilder.Append(string.Format("[{0},{1}],", i, average));
+                xAxisBuilder.Append(string.Format(@"[{0},'{1}'],", i, s));
+
+
+                <tr >
+                    <td>
+                        @(i + 1)
+                    </td>
+                    <td>
+           
+                    
+                        @s
+            
+                    </td>
+                    <td>
+                        @rentCount
+                    </td>
+                    <td>
+                        @orderFee.ToString("N0")
+                    </td>
+                    <td>
+                        @rentFee.ToString("N0")
+                    </td>
+                    <td>
+                        @total.ToString("N0")
+                    </td>
+                    <td>
+                        @approvePayment.ToString("N0")
+                    </td>
+                    <td>
+                        @totalDays
+                    </td>
+                    <td>
+                        @average.ToString("N0")
+                    </td>
+                    <td>
+                        @remain.ToString("N0")
+                    </td>
+                    <td>
+                        @unApprovePayment.ToString("N0")
+                    </td>
+                </tr>
+            }
+        }
+        
+    </tbody> 
+</table>
+
+@Html.Hidden("chart", @valueBuilder.ToString().Substring(0, valueBuilder.Length - 1) + "]")
+@Html.Hidden("xAxis", @xAxisBuilder.ToString().Substring(0, xAxisBuilder.Length - 1) + "]")
+
+   
+    
+   
+
+
+
+

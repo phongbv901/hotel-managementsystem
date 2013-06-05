@@ -1,0 +1,26 @@
+﻿@model HotelDAL.OrderDetail
+
+<tr id="order-item-@Model.OrderID">
+    <td>
+      @* <form method="GET" action="Room/RemoveItem" >*@
+         <table class="table table-condensed">
+            <tbody>
+            <tr>
+            <input type="hidden" value="@Model.RentID" name="txtRentId"/>
+             <td>
+                <img src="/Content/imgs/product/@Model.Product.PicURL" width="35" height="35"/>
+             </td> 
+             <td style="width: 70px">
+                <input type="hidden" name="txtProductId" value="@Model.OrderID"/>
+                @Model.Product.ProductName
+             </td> 
+             <td >@Model.Quantity</td> 
+             <td style="width: 80px">@Model.TotalPrice</td> 
+             <td style="width: 50px"><button type="submit"class="btn btn-inverse btn-mini" data-orderid="@Model.OrderID" data-row="order-item-@Model.OrderID" onclick="removeItem(this)">Bỏ</button></td> 
+           </tr>
+            </tbody>
+           
+         </table>
+      @* </form>*@
+     </td>
+    </tr>

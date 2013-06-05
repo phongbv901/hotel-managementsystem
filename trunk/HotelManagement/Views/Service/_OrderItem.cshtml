@@ -1,0 +1,21 @@
+﻿@model HotelBLL.Models.OrderDetailViewModel
+<tr id="order-item-@Model.OrderID" >
+    <td >
+        <img src="/Content/imgs/product/@Model.PicURL" width="20" height="20"/>
+        
+    </td>
+    <td >
+        @Model.ProductName
+    </td>
+    <td >@Model.Quantity
+    </td>
+    <td >@Model.TotalPrice.ToString("N0")
+    </td>
+    @if (Model.IsEditable == true)
+    {
+        <td >
+            <button id="btnRemoveItem" class="btn btn-inverse btn-mini" onclick="removeItem(@Model.OrderID,@Model.TotalPrice)">
+                Xóa</button>
+        </td>
+    }
+</tr>

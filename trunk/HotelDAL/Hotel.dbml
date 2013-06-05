@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HMS" Class="HotelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=PHUONGLHK\PHUONGLHK;Initial Catalog=HMS;User ID=sa" SettingsObjectName="HotelDAL.Properties.Settings" SettingsPropertyName="HMSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Composition" Member="Compositions">
+    <Type Name="Composition">
+      <Column Name="dasd" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CompositionID" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ProducID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ItemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Product_Composition" Member="Product" ThisKey="ProducID" OtherKey="ProductID" Type="Product" IsForeignKey="true" />
+      <Association Name="ProductItem_Composition" Member="ProductItem" ThisKey="ItemID" OtherKey="ItemID" Type="ProductItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cost" Member="Costs">
+    <Type Name="Cost">
+      <Column Name="CostID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CatID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CostDescription" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="CostDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CostStatus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PaidPerson" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LoggedPerson" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ApprovedPerson" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="CostCategory_Cost" Member="CostCategory" ThisKey="CatID" OtherKey="CatID" Type="CostCategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CostCategory" Member="CostCategories">
+    <Type Name="CostCategory">
+      <Column Name="CatID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CatName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="CostCategory_Cost" Member="Costs" ThisKey="CatID" OtherKey="CatID" Type="Cost" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PersonID" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CustomerName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="Rent_Customer" Member="Rent" ThisKey="RentID" OtherKey="RentID" Type="Rent" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HotelInfo" Member="HotelInfos">
+    <Type Name="HotelInfo">
+      <Column Name="HotelID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HotelName" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Website" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Descriptions" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="StartDayTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Inventory" Member="Inventories">
+    <Type Name="Inventory">
+      <Column Name="ItemID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HistoryID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="InventoryHistory_Inventory" Member="InventoryHistory" ThisKey="HistoryID" OtherKey="HistoryID" Type="InventoryHistory" IsForeignKey="true" />
+      <Association Name="ProductItem_Inventory" Member="ProductItem" ThisKey="ItemID" OtherKey="ItemID" Type="ProductItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InventoryHistory" Member="InventoryHistories">
+    <Type Name="InventoryHistory">
+      <Column Name="HistoryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CheckingDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="InventoryHistory_Inventory" Member="Inventories" ThisKey="HistoryID" OtherKey="HistoryID" Type="Inventory" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrderDetail" Member="OrderDetails">
+    <Type Name="OrderDetail">
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TotalPrice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OrderDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Product_OrderDetail" Member="Product" ThisKey="ProductID" OtherKey="ProductID" Type="Product" IsForeignKey="true" />
+      <Association Name="Rent_OrderDetail" Member="Rent" ThisKey="RentID" OtherKey="RentID" Type="Rent" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Payment" Member="Payments">
+    <Type Name="Payment">
+      <Column Name="PaymentID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="PayTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Rent_Payment" Member="Rent" ThisKey="RentID" OtherKey="RentID" Type="Rent" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceAddition" Member="PriceAdditions">
+    <Type Name="PriceAddition">
+      <Column Name="AdditionPriceID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EarlyHourRange" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="EarlyPriceRange" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="LateHourRange" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="LatePriceRange" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceGroup" Member="PriceGroups">
+    <Type Name="PriceGroup">
+      <Column Name="PriceGroupID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PriceGroupName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StartDayTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EndNightTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DayPrice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RoundMinute" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstHourPrice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SecondHourPrice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ThirdHourPrice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NextHourPrice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NightAdditionPriceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DayAdditionPriceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceGroup_Room" Member="Rooms" ThisKey="PriceGroupID" OtherKey="PriceGroupID" Type="Room" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceNight" Member="PriceNights">
+    <Type Name="PriceNight">
+      <Column Name="RoomPriceID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceGroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EndTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxDuration" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Products">
+    <Type Name="Product">
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PicURL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CatID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Product_Composition" Member="Compositions" ThisKey="ProductID" OtherKey="ProducID" Type="Composition" />
+      <Association Name="Product_OrderDetail" Member="OrderDetails" ThisKey="ProductID" OtherKey="ProductID" Type="OrderDetail" />
+      <Association Name="ProductCategory_Product" Member="ProductCategory" ThisKey="CatID" OtherKey="CateID" Type="ProductCategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductCategory" Member="ProductCategories">
+    <Type Name="ProductCategory">
+      <Column Name="CateID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CateName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ProductCategory_Product" Member="Products" ThisKey="CateID" OtherKey="CatID" Type="Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductInventory" Member="ProductInventories">
+    <Type Name="ProductInventory">
+      <Column Name="ProductInventoryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ChangeDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsImport" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsApproved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="ProductItem_ProductInventory" Member="ProductItem" ThisKey="ItemID" OtherKey="ItemID" Type="ProductItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductItem" Member="ProductItems">
+    <Type Name="ProductItem">
+      <Column Name="ItemID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ItemName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Unit" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="ProductItem_Composition" Member="Compositions" ThisKey="ItemID" OtherKey="ItemID" Type="Composition" />
+      <Association Name="ProductItem_Inventory" Member="Inventories" ThisKey="ItemID" OtherKey="ItemID" Type="Inventory" />
+      <Association Name="ProductItem_ProductInventory" Member="ProductInventories" ThisKey="ItemID" OtherKey="ItemID" Type="ProductInventory" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rent" Member="Rents">
+    <Type Name="Rent">
+      <Column Name="RentID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoomID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CheckInDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CheckOutDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ApproveDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RentFee" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OrderFee" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TotalPayment" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiscountFee" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AdditionFee" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RentStatus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RentType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="FeeDescription" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="CheckInPerson" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CheckOutPerson" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ApprovePerson" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InvoiceID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BikeID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Rent_Customer" Member="Customers" ThisKey="RentID" OtherKey="RentID" Type="Customer" />
+      <Association Name="Rent_OrderDetail" Member="OrderDetails" ThisKey="RentID" OtherKey="RentID" Type="OrderDetail" />
+      <Association Name="Rent_Payment" Member="Payments" ThisKey="RentID" OtherKey="RentID" Type="Payment" />
+      <Association Name="Rent_RentFeeChange" Member="RentFeeChanges" ThisKey="RentID" OtherKey="RentID" Type="RentFeeChange" />
+      <Association Name="Room_Rent" Member="Room" ThisKey="RoomID" OtherKey="RoomID" Type="Room" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RentFeeChange" Member="RentFeeChanges">
+    <Type Name="RentFeeChange">
+      <Column Name="RentFeeChangeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsAddition" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Rent_RentFeeChange" Member="Rent" ThisKey="RentID" OtherKey="RentID" Type="Rent" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Room" Member="Rooms">
+    <Type Name="Room">
+      <Column Name="RoomID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoomName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NumOfBed" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumOfPerson" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Funiture" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="RoomDescription" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="RoomStatus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FloorID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PriceGroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Room_Rent" Member="Rents" ThisKey="RoomID" OtherKey="RoomID" Type="Rent" />
+      <Association Name="PriceGroup_Room" Member="PriceGroup" ThisKey="PriceGroupID" OtherKey="PriceGroupID" Type="PriceGroup" IsForeignKey="true" />
+      <Association Name="RoomFloor_Room" Member="RoomFloor" ThisKey="FloorID" OtherKey="FloorID" Type="RoomFloor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RoomFloor" Member="RoomFloors">
+    <Type Name="RoomFloor">
+      <Column Name="FloorID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FloorName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="RoomFloor_Room" Member="Rooms" ThisKey="FloorID" OtherKey="FloorID" Type="Room" />
+    </Type>
+  </Table>
+</Database>

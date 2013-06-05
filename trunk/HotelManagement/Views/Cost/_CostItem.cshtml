@@ -1,0 +1,98 @@
+﻿@using HotelDAL
+@model HotelBLL.Models.CostItemViewModel
+
+<tr id="cost-@Model.Cost.CostID" >
+                <td>@Model.Index</td>
+                <td>
+                @Model.Cost.CostDescription
+                </td>
+                
+                <td>
+                    @String.Format("{0:dd-MM-yyyy HH:mm}", Model.Cost.CostDate)
+                </td>
+                <td>
+                    @(((int)Model.Cost.Amount).ToString("N0"))
+                </td>
+               
+               <td>
+                   <span class="label">@Model.Cost.CostCategory.CatName</span>
+                </td>
+                <td>
+                    @{
+                switch (@Model.Cost.CostStatus)
+                {
+                    case (int)CostStatusEnum.New:
+                        { 
+                        <span class="label label-warning">Chưa Duyệt</span>
+                            break;
+                        }
+                    case (int)CostStatusEnum.Approved:
+                        { 
+                        <span class="label label-success">Đã Duyệt</span>
+                            break;
+                        }
+                     case (int)CostStatusEnum.WaitDisabled:
+                        { 
+                        <span class="label label-success">Xin hủy</span>
+                            break;
+                        }
+                     case (int)CostStatusEnum.Disabled:
+                        { 
+                        <span class="label label-success">Đã hủy</span>
+                            break;
+                        }
+                }    
+                    }
+                </td>
+              
+              @if (Model.Cost.CostStatus == (int)CostStatusEnum.New)
+            { 
+                if (Model.IsAdmin)
+                {
+                <td>
+                   <button class="btn btn-success" type="submit" onclick="ChangeCostStatus(@Model.Cost.CostID,@Model.Cost.CostStatus,@((int)CostStatusEnum.Approved),@Model.Index,false,'')">
+                <i class="icon-check icon-white"></i>
+            </button>
+                </td>
+                }
+                
+                <td>
+                     <button class="btn btn-danger" type="submit" onclick="ChangeCostStatus(@Model.Cost.CostID,@Model.Cost.CostStatus,@((int)CostStatusEnum.WaitDisabled),@Model.Index,true,'Bạn có muốn xin hủy dữ liệu này không?')">
+                 <i class="icon-minus-sign icon-white"></i></button>
+                </td>
+                
+            }
+            else if (Model.Cost.CostStatus == (int)CostStatusEnum.Approved)
+            {
+                if (Model.IsAdmin)
+                {
+                 <td>
+                   <button class="btn btn-danger" type="submit" onclick="ChangeCostStatus(@Model.Cost.CostID,@Model.Cost.CostStatus,@((int)CostStatusEnum.WaitDisabled),@Model.Index,true,'Bạn có muốn xin hủy dữ liệu này không?')">
+                 <i class="icon-minus-sign icon-white"></i></button>
+                </td>
+                }
+            }
+            else if (Model.Cost.CostStatus == (int)CostStatusEnum.WaitDisabled)
+            { 
+                if (Model.IsAdmin)
+                {
+                 <td>
+                   <button class="btn btn-danger" type="submit" onclick="ChangeCostStatus(@Model.Cost.CostID,@Model.Cost.CostStatus,@((int)CostStatusEnum.Disabled),@Model.Index,true,'Bạn có muốn đưa dữ liệu này vào thùng rác không?')">
+                <i class="icon-trash icon-white"></i>
+            </button>
+                </td>
+                }
+            }
+            else if (Model.Cost.CostStatus == (int)CostStatusEnum.Disabled)
+            {
+                if (Model.IsAdmin)
+                {
+                 <td>
+                     @*Delete permanent*@
+            <button class="btn btn-danger" type="submit" onclick="ChangeCostStatus(@Model.Cost.CostID,@Model.Cost.CostStatus,@((int)CostStatusEnum.Deleted),@Model.Index,true,'Bạn có muốn xóa mất dữ liệu này không?')">
+                <i class="icon-remove icon-white"></i>
+            </button>
+                </td>
+                }
+            }
+</tr>

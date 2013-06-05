@@ -1,0 +1,147 @@
+﻿@model HotelBLL.Models.SearchCostTableViewModel
+@using HotelDAL;
+@using HotelBLL.Models
+
+
+<table class="table table-bordered table-striped ">
+    <thead>
+        <tr>
+            <th>
+                STT
+            </th>
+            <th>
+                Nội Dung
+            </th>
+            <th>
+                Thời điểm 
+            </th>
+            <th>
+                Số Tiền
+            </th>
+            <th>
+                Danh Mục
+            </th>
+            <th>
+                Trạng thái
+            </th>
+           
+            @if (Model.Status == (int)CostStatusEnum.New)
+            { 
+                if (Model.IsAdmin)
+                {
+                <th>
+                    Duyệt
+                </th>
+                }
+                
+                <th>
+                    Xin hủy
+                </th>
+                
+            }
+            else if (Model.Status == (int)CostStatusEnum.Approved)
+            {
+                if (Model.IsAdmin)
+                {
+                 <th>
+                   Xin hủy
+                </th>
+                }
+            }
+            else if (Model.Status == (int)CostStatusEnum.WaitDisabled)
+            { 
+                if (Model.IsAdmin)
+                {
+                 <th>
+                   Hủy
+                </th>
+                }
+            }
+            else if (Model.Status == (int)CostStatusEnum.Disabled)
+            {
+                if (Model.IsAdmin)
+                {
+                 <th>
+                   Xóa
+                </th>
+                }
+            }
+        </tr>
+    </thead>
+    <tbody id="CostDetailTable">
+      
+       @{
+           int i = 0;
+           foreach (var item in Model.Costs)
+           {
+               i = i + 1;
+               CostItemViewModel costModel = new CostItemViewModel();
+               costModel.Cost = item;
+               costModel.Index = i;
+               costModel.IsAdmin = Model.IsAdmin;
+               @Html.Partial("_CostItem", costModel)
+           }
+       }
+    </tbody>
+</table>
+
+<div class="pagination">
+    <ul>
+        @{
+            int pageSize = 20;
+
+            if (Model.CurrentPageIndex > 1)
+            { 
+            <li class="active"><a onclick="GetCostByStatus(@Model.Status,1,@pageSize)">Đầu tiên</a></li>
+            }
+
+            int minIndex = Math.Max(1, Model.CurrentPageIndex - 4);
+            int maxIndex = Math.Min(Model.TotalPage, Model.CurrentPageIndex + 4);
+            for (int pageindex = minIndex; pageindex <= maxIndex; pageindex++)
+            {
+                if (pageindex == Model.CurrentPageIndex)
+                {
+            <li class="disabled"><a href="#">@pageindex</a></li>
+                }
+                else
+                {
+            <li class="active"><a onclick="GetCostByStatus(@Model.Status,@pageindex,@pageSize)">@pageindex</a>
+            </li>
+                }
+            }
+
+            //Thêm 1 vài số cho dễ navigation. Theo 5s.vn
+            maxIndex += 9;
+            if (maxIndex < Model.TotalPage)
+            {
+            <li class="active"><a onclick="GetCostByStatus(@Model.Status,@maxIndex,@pageSize)">@maxIndex</a>
+            </li>
+            
+                                                                                          maxIndex += 40;
+                                                                                          if (maxIndex < Model.TotalPage)
+                                                                                          {
+            <li class="active"><a onclick="GetCostByStatus(@Model.Status,@maxIndex,@pageSize)">@maxIndex</a>
+            </li>
+                                                                                          }
+                                                                                          maxIndex += 50;
+                                                                                          if (maxIndex < Model.TotalPage)
+                                                                                          {
+            <li class="active"><a onclick="GetCostByStatus(@Model.Status,@maxIndex,@pageSize)">@maxIndex</a>
+            </li>
+                                                                                          }
+            }
+
+
+
+
+            if (Model.CurrentPageIndex < Model.TotalPage)
+            { 
+      
+            <li class="active"><a onclick="GetCostByStatus(@Model.Status,@Model.TotalPage,@pageSize)">
+                Cuối</a></li>
+            }
+        
+        }
+    </ul>
+</div>
+

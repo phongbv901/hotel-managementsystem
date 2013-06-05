@@ -1,0 +1,122 @@
+﻿@model HotelDAL.Rent
+<div class="modal hide" id="myModal">
+<div id= "formThanhToan" style="width: 840px !important;">
+     <div>
+         <input type="hidden" id="current-roomid" value="@Model.RoomID"/>
+         <fieldset style="float: left; padding: 5px;">
+             <h3>Phòng @Model.Room.RoomName - Thanh Toán</h3>
+             <div class="control-group">
+                 <label>
+                     Tên Khách Hàng</label>
+                 <div class="controls">
+                     <input type="text" name="txtCustomerName" value="@Model.CustomerRents.Take(1).Single().Customer.CustomerName" disabled="disabled"/>
+                 </div>
+             </div>
+             <div class="control-group">
+                 <label>
+                     CMND</label>
+                 <div class="controls">
+                     <input type="text" name="txtPersonID" value="@Model.CustomerRents.Take(1).Single().Customer.PersonID" disabled="disabled"/>
+                 </div>
+             </div>
+             <div class="control-group">
+                 <label>
+                     Số xe</label>
+                 <div class="controls">
+                     <input type="text" name="txtBikeID" value="@Model.CustomerRents.Take(1).Single().Customer.BikeID" disabled="disabled"/>
+                 </div>
+             </div>
+            <fieldset style="float: left; clear: left; padding: 5px">
+             <h3>Thông tin thuê phòng</h3>
+             <div class="control-group">
+                 <label>Thời điểm vào</label>
+                 <div class="controls">
+                     <input type="text" id="CheckInDate" name="txtCheckInDate" value="@Model.CheckInDate" disabled="disabled"/>
+                 </div>
+             </div>
+             <div class="control-group">
+                 <label>
+                     Thời điểm ra</label>
+                 <div class="controls">
+                     <input type="text" id="CheckInDate" name="txtCheckOutDate" value="@Model.CheckOutDate" disabled="disabled"/>
+                 </div>
+             </div>
+             <div class="control-group">
+                 <label>
+                     Loại</label>
+                 <div class="controls">
+                     <input type="text" id="CheckInDate" name="txtCheckOutDate" value="@Model.RentType1.TypeName" disabled="disabled"/>
+                 </div>
+             </div>
+        
+         </fieldset>
+         </fieldset>
+         <fieldset style="padding: 5px;float: left">
+             <h3>Chi tiết thanh toán</h3>
+       
+             <div class="control-group">
+                 <label>
+                     Tiền phòng</label>
+                 <div class="controls">
+                     <input type="text" id="rentFee" name="txtOrderFee" value="@Model.RentFee.ToString()" disabled="disabled"/>Đồng
+                 </div>
+             </div>
+             <div class="control-group">
+                 <label>
+                    Dịch vụ</label>
+                 <div class="controls">
+                     <input type="text" id="orderFee" name="txtCheckInDate" value="@Model.OrderFee.ToString()" disabled="disabled"/>Đồng
+                 </div>
+             </div>
+             <h3>Chi tiết dịch vụ</h3>
+            <fieldset style="margin-top: 12px; height:300px; overflow:auto;" id="ServiceDetails" >
+            
+         <table style="width: 250px">
+            @Html.Action("LoadItems", "Service", new { txtRentId = @Model.RentID, editable = false })
+            <script type="text/javascript">
+                (function ($) {
+                    $(document).ready(function () {
+                        $("#ServiceDetails").mCustomScrollbar();
+                    });
+                })(jQuery);
+            </script>
+         </table>
+     </fieldset>
+     <fieldset style="float: left; margin:20px 20px;">
+         <a href="#" class="btn btn-info" onclick="CloseSummaryForm(this)" data-roomid="@Model.RoomID" style="width: 100px">OK</a>
+     </fieldset>
+         </fieldset>
+     <fieldset style="float:  right">
+        <h3>Thanh Toán</h3>
+        <div class="control-group">
+                 <label>
+                     Tổng</label>
+                 <div class="controls">
+                     <input type="text" id="totalFee" name="txtTotalFee" value="@(Model.RentFee + Model.OrderFee)" disabled="disabled"/>Đồng
+                 </div>
+             </div>
+             <div class="control-group">
+                 <label>
+                     Đã trả</label>
+                 <div class="controls">
+                     <input type="text" id="totalPayment" name="txtTotalPayment" value="@Model.TotalPayment" disabled="disabled"/>Đồng
+                 </div>
+             </div>
+             <h3>Thanh Toán</h3>
+             <div id="PaymentDetails">
+              <table style="width: 250px">
+                 @Html.Action("PaymentDetails", "Prepaid", new { txtRentID = @Model.RentID })
+                
+            </table>
+         </div>
+     </fieldset>    
+     </div>
+</div>
+<script type="text/javascript">
+    (function ($) {
+        $(document).ready(function () {
+            $("#PaymentDetails").mCustomScrollbar();
+        });
+    })(jQuery);
+</script>
+</div>

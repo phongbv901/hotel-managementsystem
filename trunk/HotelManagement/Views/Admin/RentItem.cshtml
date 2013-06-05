@@ -1,0 +1,135 @@
+﻿ @using HotelDAL;
+ @using HotelManagement
+ 
+ @model HotelManagement.Models.RentItemViewModel
+ 
+ <tr id="RentID-@Model.Rent.RentID" >
+                <td>@Model.Index</td>
+                <td>
+                @Model.Rent.InvoiceID
+                </td>
+                <td>
+                    <input type="hidden" id="RentID" value="@Model.Rent.RentID"/>
+                    @Model.Rent.Room.RoomName
+                </td>
+                <td>
+                    @{
+               switch (@Model.Rent.RentType)
+               {
+                   case (int)@RentTypeEnum.Hour:
+                       { 
+                        <span class="label label-important">Theo giờ</span>
+                           break;
+                       }
+                   case (int)@RentTypeEnum.Night:
+                       { 
+                        <span class="label label-inverse">Qua dêm</span>
+                           break;
+                       }
+                   case (int)@RentTypeEnum.Day:
+                       { 
+                        <span class="label">Theo ngày</span>
+                           break;
+                       }
+
+                   default:
+                       break;
+               }    
+                    }
+                </td>
+                <td>
+                    @String.Format("{0:dd-MM-yyyy HH:mm}", Model.Rent.CheckInDate)
+                </td>
+                <td>
+                    @String.Format("{0:dd-MM-yyyy HH:mm}", Model.Rent.CheckOutDate)
+                </td>
+                <td>
+                    @(((int)(@Model.Rent.OrderFee + @Model.Rent.RentFee)).ToString("N0"))
+                </td>
+                <td>
+                    @(((int)Model.Rent.TotalPayment).ToString("N0"))
+                </td>
+                <td>
+                    @(((int)(@Model.Rent.OrderFee + @Model.Rent.RentFee - @Model.Rent.TotalPayment)).ToString("N0"))
+                </td>
+                <td>
+                    @{
+                switch (@Model.Rent.RentStatus)
+                {
+                    case (int)@RentStatusEnum.InStay:
+                        { 
+                        <span class="label label-warning">Ðang thuê</span>
+                            break;
+                        }
+                    case (int)@RentStatusEnum.Paid:
+                        { 
+                        <span class="label label-success">Kết thúc</span>
+                            break;
+                        }
+                    case (int)@RentStatusEnum.Approved:
+                        { 
+                        <span class="label label-info">Ðã duyệt</span>
+                            break;
+                        }
+                        case (int)@RentStatusEnum.Disabled:
+                        {
+                            <span class="label label-inverse">Ðã hủy</span>
+                            break;
+                        }
+
+                    default:
+                        break;
+                }    
+                    }
+                </td>
+                <td>
+                    <button class="btn" type="submit"  onclick="ShowCheckoutForm(this)" data-rentid="@Model.Rent.RentID"  >
+                        <i class="icon-tasks"></i>
+                    </button>
+                </td>
+                <td>
+                    @{
+                        
+                switch (@Model.Rent.RentStatus)
+                {
+
+                    case (int)@RentStatusEnum.Paid:
+                        { 
+                        <button class="btn btn-success" type="submit" data-changestatus="@((int)RentStatusEnum.Approved)" data-rentid="@Model.Rent.RentID" data-index="@Model.Index" onclick="ChangeRentStatus(this)">
+                            <i class="icon-check"></i></button>    
+                            break;
+                        }
+
+                    default:
+                        break;
+                }    
+                    }
+                </td>
+                <td>
+                       @{
+                        
+                switch (@Model.Rent.RentStatus)
+                {
+
+                    case (int)@RentStatusEnum.Paid:
+                    case (int)@RentStatusEnum.Approved: 
+                        { 
+                        <button class="btn btn-danger" type="submit" data-changestatus="@((int)RentStatusEnum.Disabled)" data-rentid="@Model.Rent.RentID" data-index="@Model.Index" onclick="ChangeRentStatus(this)">
+                            <i class="icon-remove"></i></button>
+                                                                                                                                 break;
+                        }
+
+                    default:
+                        break;
+                }    
+                    }
+                        
+                        
+                </td>
+</tr>
+
+          
+                 
+
+
+           

@@ -1,0 +1,250 @@
+﻿
+@using HotelDAL
+@model Rent
+           
+@{
+    int rentFee = Model.RentFee;
+    int orderFee = Model.OrderFee;
+    int additionFee = Model.AdditionFee;
+    int discountFee = Model.DiscountFee;
+
+    var totalFee = rentFee + orderFee + additionFee - discountFee;
+    var totalPayment = Model.TotalPayment;
+
+    var remainFee = totalFee - totalPayment; 
+}
+<div id="formThanhToan" >
+    <div class="modal-header" >
+        @Html.HiddenFor(model => model.RentID, new {id = "rentId"})
+        @Html.HiddenFor(model => model.RoomID, new {id = "roomId"})
+        @Html.HiddenFor(model => model.RentType, new {id = "hdfOrginialRentType"})
+     
+        <input type="hidden" id="current-roomid" value="@Model.RoomID"/>
+        <div class="span5">
+            <h4>HÓA ĐƠN PHÒNG @Model.Room.RoomName</h4>
+        </div>
+        <div class="pagination-right">
+           <button class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            
+        </div>
+
+    </div>
+    <div class="modal-body form-horizontal">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab1" data-toggle="tab">Hóa đơn</a></li>
+            <li><a href="#tab2" data-toggle="tab">Khách hàng</a></li>
+            <li><a href="#tab3" data-toggle="tab">Phụ thu </a></li>
+            <li><a href="#tab4" data-toggle="tab">Dịch vụ</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab1">
+                <div class="container-fluid">
+                    <div class="row-fluid ">
+                        <div id="rentInfo" class="span6 span-space">
+                            <div class="alert alert-success">
+                                <h5>Thông tin thuê phòng</h5>
+                                <div class="control-group" >
+                                    <label class="control-label">Mã số phiếu</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(m => m.InvoiceID, new {@class = "input-medium", onkeydown = "ChangeStatusUpdateButton(false)"})
+                                        @Html.ValidationMessageFor(m => m.InvoiceID)
+                                    </div>
+                                </div>
+            
+                                <div class="control-group">
+                                    <label class="control-label">Thời gian vào</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(m => m.CheckInDate, new {@class = "input-medium", onchange = "ChangeStatusUpdateButton(false)"})
+                                        @Html.ValidationMessageFor(m => m.CheckInDate)
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Thời gian ra</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.CheckOutDate, new {@class = "input-medium"})
+                                        @Html.ValidationMessageFor(model => model.CheckOutDate)
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Số xe</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.BikeID, new {@class = "input-medium", onkeydown = "ChangeStatusUpdateButton(false)"})
+                                        @Html.ValidationMessageFor(model => model.BikeID)
+                                    </div>
+                                </div>
+
+                                <div class="control-group">        
+                                    @Html.HiddenFor(model => model.RentType, new {id = "hdfRentType"})
+                                    <div title="Hình thức thuê" class="btn-group" data-toggle="buttons-radio">
+                                        <button type="button" class="btn" id="btnHourFee" onclick="           UpdateRentFee(@((int) RentTypeEnum.Hour))" data-rentType=@((int) RentTypeEnum.Hour)  >
+                                            Theo giờ</button>
+                                    
+                                        <button type="button" class="btn" id="btnNightFee" onclick="           UpdateRentFee(@((int) RentTypeEnum.Night))" data-rentType=@((int) RentTypeEnum.Night) >
+                                            Qua đêm</button>
+                                   
+                                    
+                                        <button type="button" class="btn" id="btnDayFee" onclick="           UpdateRentFee(@((int) RentTypeEnum.Day))" data-rentType=@((int) RentTypeEnum.Day) >
+                                            Theo ngày</button>
+                                    </div> 
+                   
+                                </div>
+              
+                                    
+                                <div class="control-group">
+                                    <button id="btnUpdateRentInfo" class="btn" onclick="UpdateRentInfo(); " disabled="disabled">
+                                        Cập nhật</button>
+                                </div>
+
+                            </div>
+                            <div class="alert alert-success">
+                                <div class="align-center">
+                                    <button class="btn btn-success " ><i class="icon-white icon-print"></i> In hóa đơn</button>
+                                    <div class="btn-group">
+                                        <button class="btn btn-success" onclick="CheckOut(); ">
+                                            Trả phòng
+                                        </button>
+                                        <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a >
+                                                    Trả phòng 
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                             
+                        <div class="span6 span-space "   >
+                            <div class="alert alert-success">
+                                <h5> Tính tiền</h5>
+                                    
+                                <div class="control-group">
+                        
+                                    <label class="control-label" id="rentFeeDetail" rel="popover" data-placement="bottom" data-title="Chi tiết tiền phòng" data-trigger="hover" data-content="@Model.FeeDescription"> Tiền phòng</label>
+                                    <div class="controls">
+                                        <input type="text" id="rentFee" class="input-medium text-right uneditable-input" value="@rentFee.ToString("N0")" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">Tiền dịch vụ</label>
+                                    <div class="controls">
+                                        <input type="text" id="orderFee" class="input-medium text-right uneditable-input" value="@orderFee.ToString("N0")" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">Phụ thu</label>
+                                    <div class="controls">
+                                        <input type="text" id="addionFee" class="input-medium text-right uneditable-input" value="@additionFee.ToString("N0")" readonly="readonly" />
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Giảm giá</label>
+                                    <div class="controls">
+                                        <input type="text" id="discountFee" class="input-medium text-right uneditable-input" value="@discountFee.ToString("N0")" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <div class="alert alert-error">
+                                <div class="control-group">
+                                    <label class="control-label">Tổng cộng</label>
+                                    <div class="controls">
+                                        <input type="text" id="totalFee" class="input-medium text-right uneditable-input"  value="@totalFee.ToString("N0")" readonly="readonly" />
+                                    </div>
+                                </div>
+            
+                                <div class="control-group">
+                                    <label class="control-label">Đã thanh toán</label>
+                                    <div class="controls">
+                                        <input type="text" id="totalPayment"  class="input-medium text-right uneditable-input"  value="@totalPayment.ToString("N0")" readonly="readonly" />
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Còn lại</label>
+                                    <div class="controls">
+                                        <input type="text" id="remainFee"  class="input-medium text-right uneditable-input" value="@remainFee.ToString("N0")" readonly="readonly" />
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            @*<div class="control-group">
+                                        <div class="form-inline">
+                                        <label class="checkbox">
+                                            @Html.CheckBox("IsPayAll", true, new {id = "IsPayAll"})
+                                            Thanh toán hết
+                                        </label>
+                                        <label class="checkbox">
+                                            @Html.CheckBox("IsPrint", false, new {id = "IsPrint"})
+                                            In hóa đơn
+                                        </label>
+                                    </div>*@
+                                       
+                        </div>
+               
+                       
+                               
+                    </div>
+          
+                </div>
+            </div>
+            <div class="tab-pane" id="tab2">
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                       
+                        <div class="span6 span-space"   >
+                            @Html.Action("GetRentCustomers", "Rent", new {rentId = @Model.RentID})
+                                    
+                        </div>
+
+                        <div class="span6 span-space"> 
+                            @Html.Action("GetRentPayments", "Rent", new {rentId = @Model.RentID})
+                        </div>
+
+                       
+                    </div>
+                </div>      
+            </div>
+
+            <div class="tab-pane" id="tab3">
+                <div class="container-fluid">
+                    <div class="row-fluid">
+
+                        <div class="span6 span-space"> 
+                         
+                            @Html.Action("GetRentFeeChange", "Rent", new { rentId = @Model.RentID, isAddition = true })
+                        </div>
+
+                        <div class="span6 span-space">
+                            @Html.Action("GetRentFeeChange", "Rent", new { rentId = @Model.RentID, isAddition = false })
+                        </div>
+                    </div>
+                </div>      
+            </div>
+            <div class="tab-pane" id="tab4">
+                <div class="container-fluid">
+                    @Html.Action("GetRentService", "Rent", new {rentId = @Model.RentID})
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="modal-footer"></div>
+</div>
+     
+
+   
+            
+                
+   
+
+
