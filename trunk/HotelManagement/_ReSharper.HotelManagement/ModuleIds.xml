@@ -1,6 +1,0 @@
-<Modules>
-  <Module PersistentId="1110F51C-8684-4826-BC18-DE76F6A4A147" ModuleId="HotelDAL" />
-  <Module PersistentId="A947F42A-031F-4183-BB77-AC2E2802C4FB" ModuleId="HotelFee" />
-  <Module PersistentId="19150A0E-CB1A-4A09-BF1C-25E5857CF7F9" ModuleId="HotelManagement" />
-  <Module PersistentId="601C0D57-B41D-4AF6-96F0-DD1FDC5A0D36" ModuleId="TestProject1" />
-</Modules>
